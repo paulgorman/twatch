@@ -1,0 +1,12 @@
+# (Cron version -- $FreeBSD: src/usr.sbin/cron/crontab/crontab.c,v 1.24 2006/09/03 17:52:19 ru Exp $)
+#           field         allowed values
+#           -----         --------------
+#           minute        0-59
+#           hour          0-23
+#           day of month  1-31
+#           month         1-12 (or names, see below)
+#           day of week   0-7 (0 or 7 is Sun, or use names)
+
+* * * * * /usr/bin/fetch -q -o /home/presence/twatch/irev-loads.xml http://sl.irev.net/ > /dev/null 2>&1
+* * * * * /usr/bin/fetch -q -o /home/presence/twatch/inmh-loads.xml http://sbeyer.com/sl.php > /dev/null 2>&1
+*/15 * * * * /usr/bin/fetch -q -o /home/presence/twatch/weather.xml http://presence.irev.net/weather/rss3.php > /dev/null 2>&1
