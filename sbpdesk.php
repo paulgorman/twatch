@@ -76,7 +76,8 @@ function bw($socket) {
 	if (preg_match("/ready/i",$snmp['ricoh'])) {
 		$timerows[2] = date("l, M jS");
 	} else {
-		$timerows[2] = "Ricoh: ". $snmp['ricoh'];
+		$timerows[2] = preg_replace("/string/i","",$snmp['ricoh']);
+		$timerows[2] = preg_replace("/[^a-z0-9A-Z ]/","",$timerows[2]);
 	}
 	$timerows[3] = "Kbps In:  " . sprintf("% 6s",$snmp['kbpsin']);
 	$timerows[4] = "Kbps Out: " . sprintf("% 6s",$snmp['kbpsout']);
