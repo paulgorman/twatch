@@ -6,7 +6,7 @@
 #
 
 // IP of your #twatch  (better setup a fixed lease in your DHCP server)
-$TWATCH_IP = '192.168.1.54';
+$TWATCH_IP = '10.180.24.149';
 
 // Port the #twatch listens on
 $TWATCH_PORT = '1337';
@@ -267,7 +267,7 @@ function TwatchPagePage(&$socket, $text, $delay=-1) {
     Lines that are shorter then 20 chars are handles just as in
       TwatchPrintRows. Only longer lines are scrolled.
 */
-function TwatchScrollRows(&$socket, $rows, $delay=250000, $repeat=1, $join=' | ', $align='left') {
+function TwatchScrollRows(&$socket, $rows, $delay=250000, $repeat=1, $join=' | ', $align='center') {
 	$len = array();
 	$scroll = array();
 	$maxlen = 0;

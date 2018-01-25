@@ -14,4 +14,3 @@ echo " 1 minute: $one\n";
 echo " 5 minute: $five\n";
 echo "15 minute: $fifteen\n";
 
-?>
